@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+{{ super() }}
+	<style>
+        form
+        {
+            margin-left: 17%;
+            margin-right: 15%;
+        }
+	</style>
+{% endblock %}
+
+{% block title %}Title{% endblock %}
+
+{% block page_content %}
+    <!--
+    <div class="photo">
+        <img class="center-block" src="../static/vcu.png" alt="LOGO" height="100px" width="250px">
+    </div>
+    -->
+    <div class="page-header">
+        <h1 class="text-center">Create a Post</h1>
+    </div>
+    {{ wtf.quick_form(form) }}
+{% endblock %}
