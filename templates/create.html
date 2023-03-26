@@ -11,6 +11,8 @@
         }
         .terms{
             font-size:12px;
+            margin-left: 17%;
+            margin-right: 15%;
         }
 	</style>
 {% endblock %}
@@ -18,15 +20,14 @@
 {% block title %}Tell Your Story{% endblock %}
 
 {% block page_content %}
-    <!--
-    <div class="photo">
-        <img class="center-block" src="../static/vcu.png" alt="LOGO" height="100px" width="250px">
+    <div class="button-container">
+    <button class="button" onclick="window.location.href='https://www.google.com'">Safety Exit</button>
     </div>
-    -->
     <div class="page-header">
         <h1 class="text-center">Tell Your Story</h1>
     </div>
     {{ wtf.quick_form(form) }}
+    <br>
     <div class="terms">
     <p>No identifying information allowed. You confirm that you will be sharing. Do not post anything that is :
        <br> (a) threatening, harassing, degrading, hateful or intimidating. Respect the rights and dignity of others.

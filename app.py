@@ -7,7 +7,6 @@ from wtforms import StringField, SubmitField, SelectField, EmailField, IntegerFi
 from wtforms.validators import DataRequired
 from models import db, Post
 
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'very secretive and difficult to figure out key'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
@@ -54,13 +53,17 @@ def create_post():
         return redirect(url_for('submitted'))
     return render_template('create.html', form=form)
 
+
 @app.route('/about')
 def about_us():  # put application's code here
     return render_template('about.html')
 
+
 @app.route('/resources')
 def get_resources():  # put application's code here
     return render_template('resources.html')
+
+
 @app.route('/')
 def index():  # put application's code here
     return render_template('index.html')
