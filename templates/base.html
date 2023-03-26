@@ -8,23 +8,18 @@
 {% block styles %}
 {{ super() }}
 	<style>
-		body
+		body, .navbar-custom
         {
-            font-family: "Avenir", serif;
-            background: darkslategrey;
-            color: aliceblue;
+            font-family: "Baskerville";
+            background: rgba(220, 173, 139, .47);
+            color: black;
         }
-
-         .navbar-custom
-         {
-             background-color: #2a4646;
-         }
 
         /* Modify brand and text color */
         .navbar-custom .navbar-brand,
-        .navbar-custom .navbar-nav
+        .navbar-custom .navbar-nav, .navbar-collapse
         {
-            color: aliceblue;
+            color: black;
         }
 	</style>
 {% endblock %}
@@ -44,7 +39,12 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
-                <li><a href="/create">Make A Post</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/create">Tell Your Story</a></li>
+                <li><a href="/posts">View Stories</a></li>
+                <li><a href="/resources">Resources</a></li>
+
+
             </ul>
         </div>
     </div>

@@ -1,6 +1,22 @@
 {% extends "base.html" %}
 
-{% block title %}404 - Page Not Found{% endblock %}
+{% block styles %}
+{{ super() }}
+	<style>
+        form
+        {
+            margin-left: 17%;
+            margin-right: 15%;
+        }
+        h2{
+            font-size: 28px;
+        }
+        p{
+            font-size: 20px;
+        }
+	</style>
+{% endblock %}
+{% block title %}Stories{% endblock %}
 
 {% block page_content %}
     <div class="page-header">
@@ -13,6 +29,7 @@
 		<div>
 			<h2>{{ post.title }}</h2>
 			<p>{{ post.content }}</p>
+            <p>{{ post.date_created }}</p>
 		</div>
 		<hr>
 	{% endfor %}

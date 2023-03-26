@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block styles %}
+{{ super() }}
+	<style>
+        form
+        {
+            margin-left: 17%;
+            margin-right: 15%;
+        }
+        p{
+            font-size: 30px;
+        }
+        h2{
+            text-underline: black;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        ul{
+            font-size: 20px;
+        }
+	</style>
+{% endblock %}
+
+{% block title %}Break The Silence{% endblock %}
+
+{% block page_content %}
+    <div class="page-header">
+        <h1 class="text-center">Resources</h1>
+    </div>
+    <br>
+    <br>
+        <h2>National Sexual Assault Hotline</h2>
+        <p>1-800-656-4673</p>
+        <br>
+        <h2>What You Can Do</h2>
+        <ul>
+            <li><a href="https://www.rainn.org/sexual-assault-laws-and-court-decisions">Legal Actions</a></li>
+            <li><a href="https://metoomvmt.org/take-action/action-toolkits/">Get Involved</a></li>
+            <li><a href="https://www.nsvrc.org/statistics">Educate</a></li>
+        </ul>
+        <h2>Mental Health Resources</h2>
+        <ul>
+            <li><a href="https://goodtherapy.org">GoodTherapy</a></li>
+            <li><a href="https://nami.org/Home/">NAMI</a></li>
+        </ul>
+    <br>
+
+    </div>
+{% endblock %}

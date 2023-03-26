@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block styles %}
+{{ super() }}
+	<style>
+        form
+        {
+            margin-left: 17%;
+            margin-right: 15%;
+        }
+        p{
+            font-size: 30px;
+        }
+	</style>
+{% endblock %}
+
+{% block title %}Break The Silence{% endblock %}
+
+{% block page_content %}
+    <div class="page-header">
+        <h1 class="text-center">About Us</h1>
+    </div>
+    <br>
+    <br>
+        <h2>The purpose of Break The Silence is to empower sexual assault and harassment survivors.</h2>
+        <br>
+        <p>We are a platform where sexual assault and sexual harassment survivors can share their story,
+            receive support, and connect with other survivors. Resources on mental health support and
+            potential next steps would also be provided. Our mission is to empower survivors to speak about
+            their experiences while also raising awareness on the impact of sexual violence and
+            foster a community of support.
+        </p>
+    <br>
+
+    </div>
+{% endblock %}

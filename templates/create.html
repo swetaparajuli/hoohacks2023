@@ -9,10 +9,13 @@
             margin-left: 17%;
             margin-right: 15%;
         }
+        .terms{
+            font-size:12px;
+        }
 	</style>
 {% endblock %}
 
-{% block title %}Title{% endblock %}
+{% block title %}Tell Your Story{% endblock %}
 
 {% block page_content %}
     <!--
@@ -21,7 +24,14 @@
     </div>
     -->
     <div class="page-header">
-        <h1 class="text-center">Create a Post</h1>
+        <h1 class="text-center">Tell Your Story</h1>
     </div>
     {{ wtf.quick_form(form) }}
+    <div class="terms">
+    <p>No identifying information allowed. You confirm that you will be sharing. Do not post anything that is :
+       <br> (a) threatening, harassing, degrading, hateful or intimidating. Respect the rights and dignity of others.
+       <br> (b) defamatory, libelous, fraudulent.
+        <br> (c) obscene, indecent, unless it's fair and accurate to your story or
+        <br> (d) protected by copyright, trademark, trade secret, right of publicity or privacy </p>
+    </div>
 {% endblock %}

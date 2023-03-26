@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, date
 
 from flask import Flask, render_template, redirect, url_for
 from flask_bootstrap import Bootstrap
@@ -48,13 +48,19 @@ def create_post():
     if form.validate_on_submit():
         title = form.title.data
         content = form.message.data
-        post = Post(title=title, content=content, date_created=datetime.utcnow())
+        post = Post(title=title, content=content, date_time_created=datetime.utcnow(), date_created=date.today())
         db.session.add(post)
         db.session.commit()
         return redirect(url_for('submitted'))
     return render_template('create.html', form=form)
 
+@app.route('/about')
+def about_us():  # put application's code here
+    return render_template('about.html')
 
+@app.route('/resources')
+def get_resources():  # put application's code here
+    return render_template('resources.html')
 @app.route('/')
 def index():  # put application's code here
     return render_template('index.html')
