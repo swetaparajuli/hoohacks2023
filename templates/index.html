@@ -8,6 +8,36 @@
             margin-left: 17%;
             margin-right: 15%;
         }
+
+        .main
+        {
+           position: absolute;
+           top: 52%;
+           left: 50%;
+           padding: 0 20px;
+           text-align: center;
+           transform: translate(-50%, -50%);
+           width: 100%
+        }
+
+        .main .title
+        {
+           font-size: 55px;
+           color: #000000;
+        }
+
+       /* Modify brand and text color */
+       .navbar-custom .navbar-brand,
+       .navbar-custom .navbar-nav
+       {
+           color: aliceblue;
+       }
+       .relative {
+       position: relative;
+       left: 30px;
+       top: 50px;
+       }
+
 	</style>
 {% endblock %}
 
@@ -17,7 +47,10 @@
     <div class="button-container">
     <button class="button" onclick="window.location.href='https://www.google.com'">Safety Exit</button>
     </div>
-    <div class="page-header">
-        <h1 class="text-center">Break The Silence</h1>
-    </div>
+        <body>
+           <div class="main">
+           <div class="title">Break The Silence</div>
+           </div>
+        <div class="relative"><img src="/static/treebranch.png" height="400px"></div>
+        </body>
 {% endblock %}
